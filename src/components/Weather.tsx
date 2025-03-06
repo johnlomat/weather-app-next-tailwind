@@ -142,8 +142,8 @@ export default function Weather() {
         fetchWeather={fetchWeather}
       />
 
-      {!hasSearched && <TodayOverview cityWeathers={cityWeathers} loading={loading} />}
-      <SearchResult searchData={searchData} loading={loading} />
+      {!hasSearched && !loading && <TodayOverview cityWeathers={cityWeathers} loading={loading} />}
+      {(hasSearched || loading) && <SearchResult searchData={searchData} loading={loading} />}
 
       <Footer />
     </div>
