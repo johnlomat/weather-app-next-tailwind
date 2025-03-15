@@ -31,7 +31,7 @@ export const SearchResultSkeleton = () => (
     <div className="mb-6 h-8 w-1/2 rounded bg-gray-200"></div>
 
     {/* Current Weather skeleton */}
-    <div className="mb-6 flex items-center justify-between rounded-lg bg-gray-50 p-4">
+    <div className="mb-6 flex flex-col items-stretch justify-between gap-4 rounded-lg bg-gray-50 p-4 md:flex-row md:items-center">
       <div className="flex items-center">
         <div className="mr-4 h-16 w-16 rounded-full bg-gray-200"></div>
         <div>
@@ -39,7 +39,7 @@ export const SearchResultSkeleton = () => (
           <div className="h-8 w-16 rounded bg-gray-200"></div>
         </div>
       </div>
-      <div className="text-right">
+      <div className="ms-auto">
         <div className="mb-2 h-4 w-20 rounded bg-gray-200"></div>
         <div className="h-5 w-24 rounded bg-gray-200"></div>
       </div>
@@ -78,7 +78,10 @@ export const SearchResultSkeleton = () => (
     <div className="w-full overflow-x-auto">
       <div className="grid w-full grid-cols-8 gap-2 pb-2">
         {[...Array(8)].map((_, i) => (
-          <div key={i} className="flex flex-col items-center rounded-lg bg-gray-50 p-3">
+          <div
+            key={i}
+            className="col-span-8 flex flex-row items-center justify-between rounded-lg bg-gray-50 p-3 md:col-span-1 md:flex-col"
+          >
             <div className="mb-2 h-4 w-12 rounded bg-gray-200"></div>
             <div className="my-2 h-10 w-10 rounded-full bg-gray-200"></div>
             <div className="mb-1 h-4 w-10 rounded bg-gray-200"></div>
