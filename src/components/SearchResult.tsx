@@ -27,7 +27,7 @@ export default function SearchResult({ searchData, loading }: SearchResultProps)
       </h2>
 
       {/* Current Weather */}
-      <div className="mb-6 flex items-center justify-between rounded-lg bg-gray-50 p-4">
+      <div className="mb-6 flex flex-col items-stretch justify-between gap-4 rounded-lg bg-gray-50 p-4 md:flex-row md:items-center">
         <div className="flex items-center">
           {current.condition.icon && (
             <div className="relative mr-4 h-16 w-16">
@@ -116,7 +116,7 @@ export default function SearchResult({ searchData, loading }: SearchResultProps)
               return (
                 <div
                   key={hour.time}
-                  className="flex flex-col items-center rounded-lg bg-gray-50 p-3"
+                  className="col-span-8 flex flex-row items-center justify-between rounded-lg bg-gray-50 p-3 md:col-span-1 md:flex-col"
                 >
                   <p className="text-sm font-medium">
                     {formattedHour} {ampm}
