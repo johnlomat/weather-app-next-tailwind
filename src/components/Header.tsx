@@ -31,7 +31,7 @@ export default function Header({
             value={searchCity}
             onChange={(e) => setSearchCity(e.target.value)}
             placeholder="Search city name, IP address or Latitude/Longitude (decimal degree)"
-            className="flex-1 rounded-l-lg border border-gray-300 bg-white px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            className="w-full flex-1 rounded-l-lg border border-gray-300 bg-white px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
           />
           <button
             type="submit"
